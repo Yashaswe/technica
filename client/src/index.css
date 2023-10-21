@@ -1,0 +1,9 @@
+#main {
+  margin: auto;
+  width: 100vw; /* 100% of the viewport width */
+  height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffdfdf;
+}
