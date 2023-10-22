@@ -4,6 +4,9 @@ import Login from "./Login";
 
 import InputEmoji from "./InputEmoji";
 import TextPlace from "./TextPlace";
+import PlaySound from "./PlaySound";
+import StoryBoard from "./StoryBoard";
+import Emojify from "./Emojify";
 
 const App = () => {
   return (
@@ -27,10 +30,8 @@ const App = () => {
     // </div>
 
     <div id="main">
-      <InputEmoji></InputEmoji>
-      <div className="text-input">
-        <TextPlace />
-      </div>
+      <Emojify />
+      {/* <StoryBoard /> */}
     </div>
 
     // <Router>
