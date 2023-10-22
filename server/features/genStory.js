@@ -11,11 +11,7 @@ const genStory = async (query) => {
             messages: [
                 {
                     role: 'user',
-<<<<<<< HEAD
-                    content: 'Write a story of 120 words max with these key words: ' + query,
-=======
                     content: 'Write a story of 90 words max with these key words: ' + query + '. Not include emojis',
->>>>>>> 95f1ca3659ad69428a697d6ad0889c7b4f9d58d6
                 },
             ],
             model: 'gpt-3.5-turbo',
