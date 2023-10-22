@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import EmojiPicker from "emoji-picker-react";
+import "./emojiStyle.css";
 
 const InputEmoji = () => {
   const [show, setShow] = useState(true);
@@ -8,7 +9,8 @@ const InputEmoji = () => {
   const handleClick = () => setShow(!show);
 
   return (
-    <InputGroup>
+    <div className="emoji-style">
+      <InputGroup>
       <EmojiPicker
         width={1500}
         emojiStyle="apple"
@@ -20,7 +22,7 @@ const InputEmoji = () => {
         //   showPreview: false; // defaults to: true
         // }
       ></EmojiPicker>
-      <Input placeholder="Enter Emoji" pr="4.5rem" />
+      {/* <Input placeholder="Enter Emoji" pr="4.5" />
       {show ? (
         <InputRightElement width="4.5rem" size="sm" onClick={handleClick}>
           <Button h="1.75rem" size="sm">
@@ -29,8 +31,10 @@ const InputEmoji = () => {
         </InputRightElement>
       ) : (
         <></>
-      )}
+      )} */}
     </InputGroup>
+    </div>
+    
   );
 };
 export default InputEmoji;
