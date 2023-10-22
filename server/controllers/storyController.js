@@ -18,11 +18,15 @@ const getUserStories = async (req, res) => {
 			return res.status(404).json({ error: 'User not found' })
 		}
 
+		if (user._id.toString() !== req.user._id.toString()) {
+			return res.status(401).json({ error: 'Unauthorized to get post.' })
+		}
+
 		const stories = await Story.find({ postedBy: user._id }).sort({
 			createdAt: -1,
 		})
 
-		return res.status(200).json(posts)
+		return res.status(200).json(stories)
 	} catch (err) {
 		res.status(500).json({ error: err.message })
 		console.log('Error in getUserStories: ', err.message)
