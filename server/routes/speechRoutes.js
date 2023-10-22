@@ -9,8 +9,6 @@ const speechRouter = express.Router();
 const client = new textToSpeech.TextToSpeechClient();
 
 speechRouter.post('/', async (req, res) => {
-  console.log(req.body.prompt);
-
   const text = req.body.prompt;
   // Construct the request
   const request = {

@@ -82,6 +82,16 @@ POST http://localhost:3000/user/login
 Content-Type: application/json
 
 {
+    "username": "yash",
+    "password": "00001111"
+}
+
+
+###
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
     "username": "linhphan",
     "password": "12345"
 }
@@ -140,8 +150,18 @@ POST http://localhost:3000/story
 Content-Type: application/json
 
 {
+    "username": "yash",
+    "query": "heart-eyes-cat red-flower rain"
+}
+
+
+###
+POST http://localhost:3000/story
+Content-Type: application/json
+
+{
     "username": "linhphan",
-    "query": "banana flag cookie"
+    "query": "happy cake tears chicken city"
 }
 
 
