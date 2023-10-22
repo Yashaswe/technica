@@ -29,7 +29,7 @@ const Emojify = () => {
       >
         {showResult ? (
           <Container>
-            <PlaySound />
+            <PlaySound sound={result.mp3} />
             <TextPlace text={result.response} />
           </Container>
         ) : (

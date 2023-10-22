@@ -13,7 +13,7 @@ const TextPlace = (props) => {
             padding: "15px",
           }}
         >
-          <Typewriter text={props.text} delay={100} infinite={false} />
+          <Typewriter text={props.text} delay={10} infinite={false} />
         </h1>
       </CardBody>
     </Card>
