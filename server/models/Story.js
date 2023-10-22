@@ -15,6 +15,10 @@ const storySchema = mongoose.Schema(
 			type: String,
 			required: true,
 		},
+		mp3: {
+			type: String,
+			default: '',
+		},
 	},
 	{
 		timestamps: true,

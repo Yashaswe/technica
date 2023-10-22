@@ -1,4 +1,5 @@
 import genStory from '../features/genStory.js'
+import genVoice from '../features/genVoice.js'
 import Story from '../models/Story.js'
 import User from '../models/User.js'
 
@@ -58,10 +59,13 @@ const createStory = async (req, res) => {
 		const openAICall = await genStory(query)
 		const response = openAICall.response
 
+		const mp3Link = await genVoice(response)
+
 		const newStory = new Story({
 			postedBy: req.user._id,
 			query,
 			response,
+			mp3: mp3Link,
 		})
 
 		await newStory.save()
