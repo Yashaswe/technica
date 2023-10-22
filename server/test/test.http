@@ -93,7 +93,7 @@ Content-Type: application/json
 
 {
     "username": "linhphan",
-    "password": "12345"
+    "password": "54321"
 }
 
 
@@ -161,7 +161,7 @@ Content-Type: application/json
 
 {
     "username": "linhphan",
-    "query": "happy cake tears chicken city"
+    "query": "😃 😄 👨‍🦲 🤼‍♀️"
 }
 
 

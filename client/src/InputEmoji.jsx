@@ -1,55 +1,53 @@
 import React, { useState } from "react";
 import { Button } from "@chakra-ui/react";
+import { FaAngleRight, FaUndo } from "react-icons/fa";
 
 import EmojiPicker, { Emoji } from "emoji-picker-react";
 
 const InputEmoji = () => {
-  const [show, setShow] = useState(true);
   const [selectedEmoji, setSelectedEmoji] = useState([]);
 
   const handleClick = () => {
-    setShow(!show);
+    let emojiUsed = "";
+    selectedEmoji.map((emoji) => {
+      const emojiName = emoji.name;
+      emojiUsed = emojiUsed.concat(emojiName[emojiName.length - 1]);
+    });
+    console.log(emojiUsed, "EMoji Used"); //Call api
+
+    // setSelectedEmoji([]);
+  };
+
+  const clearSelectedEmoji = () => {
+    setSelectedEmoji([]);
   };
   return (
     <div>
-      {/* <InputGroup>
-        <Input
-          placeholder="Enter Emoji"
-          value={<div></div>}
-          // }
-          pr="4.5rem"
-        />
-        {show ? (
-          <InputRightElement width="4.5rem" size="sm" onClick={handleClick}>
-            <Button h="1.75rem" size="sm">
-              Show
-            </Button>
-          </InputRightElement>
-        ) : (
-          <></>
-        )}
-      </InputGroup> */}
       <div className="emojiContainer">
         <div className="emojiInput">
           {selectedEmoji.map((emoji, i) => (
             <div key={i}>
+              {console.log(emoji)}
               <Emoji unified={emoji.unified}></Emoji>
             </div>
           ))}
         </div>
-        {show ? (
-          <Button onClick={handleClick} style={{ height: 50, width: "10%" }}>
-            Show
-          </Button>
-        ) : (
-          <></>
-        )}
+        <Button
+          onClick={clearSelectedEmoji}
+          style={{ backgroundColor: "white" }}
+        >
+          <FaUndo size={20} />
+        </Button>
+
+        <Button onClick={handleClick} style={{ backgroundColor: "white" }}>
+          <FaAngleRight size={20} />
+        </Button>
       </div>
       <EmojiPicker
         onEmojiClick={(emojiData, e) => {
           setSelectedEmoji([
             ...selectedEmoji,
-            { unified: emojiData.unified, name: emojiData.name },
+            { unified: emojiData.unified, name: emojiData.names },
           ]);
         }}
         width={"100%"}

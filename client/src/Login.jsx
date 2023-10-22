@@ -14,9 +14,7 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    // You can implement your login logic here, e.g., sending a request to your backend API.
-  };
+  const handleLogin = () => {};
 
   return (
     <Box
