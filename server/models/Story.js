@@ -10,7 +10,6 @@ const storySchema = mongoose.Schema(
 		query: {
 			type: String,
 			required: true,
-			maxLength: 5,
 		},
 		response: {
 			type: String,

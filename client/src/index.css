@@ -1,11 +1,10 @@
 #main {
   margin: auto;
-  width: 100vw; /*100% of the viewport width*/
-  height: 100vh; /*100% of the viewport height*/
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* align-items: center;  */
+  width: 100vw; /* 100% of the viewport width */
+  height: 100vh; /* 100% of the viewport height */
+  /* display: flex;
+  justify-content: space-evenly;
+  align-items: center; */
   background-color: #ffdfdf;
   
 }
@@ -19,4 +18,17 @@
   /* flex-wrap: wrap; */
   /* flex-flow: column wrap; */
   grid-auto-flow: row; 
+}
+
+.emojiInput {
+  display: flex;
+  width: 90%;
+  background-color: white;
+  padding: 10px;
+  height: 50px;
+}
+
+.emojiContainer {
+  display: flex;
+  background-color: white;
 }
