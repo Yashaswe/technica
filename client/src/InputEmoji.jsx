@@ -14,6 +14,11 @@ const InputEmoji = () => {
         emojiStyle="apple"
         searchDisabled={true}
         size={100}
+        previewConfig={{ showPreview: true }}
+        // defaultEmoji: string; // defaults to: "1f60a"
+        // defaultCaption: string; // defaults to: "What's your mood?"
+        //   showPreview: false; // defaults to: true
+        // }
       ></EmojiPicker>
       <Input placeholder="Enter Emoji" pr="4.5rem" />
       {show ? (
