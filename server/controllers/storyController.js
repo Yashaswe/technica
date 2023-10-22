@@ -1,3 +1,4 @@
+import genStory from '../features/genStory.js'
 import Story from '../models/Story.js'
 import User from '../models/User.js'
 
@@ -50,7 +51,8 @@ const createStory = async (req, res) => {
 		}
 
 		// Call Open AI API to generate story from the Emoji Query
-		const response = 'abc'
+		const openAICall = await genStory(query)
+		const response = openAICall.response
 
 		const newStory = new Story({
 			postedBy: req.user._id,
