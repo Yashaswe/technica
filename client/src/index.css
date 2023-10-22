@@ -2,22 +2,8 @@
   margin: auto;
   width: 100vw; /* 100% of the viewport width */
   height: 100vh; /* 100% of the viewport height */
-  /* display: flex;
-  justify-content: space-evenly;
-  align-items: center; */
-  background-color: #ffdfdf;
-  
-}
 
-.text-input {
-  background-color: white;
-  display: flex;
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* flex-wrap: wrap; */
-  /* flex-flow: column wrap; */
-  grid-auto-flow: row; 
+  background-color: #ffdfdf;
 }
 
 .emojiInput {
@@ -26,9 +12,13 @@
   background-color: white;
   padding: 10px;
   height: 50px;
+  border-radius: 10px;
 }
 
 .emojiContainer {
+  border-radius: 10px;
   display: flex;
+  margin-bottom: 10px;
+  align-items: center;
   background-color: white;
 }

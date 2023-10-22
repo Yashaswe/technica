@@ -4,7 +4,7 @@ import Typewriter from "./Typewrite";
 
 const TextPlace = (props) => {
   return (
-    <Card>
+    <Card height="100%">
       <CardBody>
         <h1
           style={{

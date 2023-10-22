@@ -31,7 +31,7 @@ const App = () => {
 
     <div id="main">
       <Emojify />
-      <StoryBoard />
+      {/* <StoryBoard /> */}
     </div>
 
     // <Router>
