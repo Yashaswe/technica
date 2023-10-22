@@ -8,8 +8,8 @@ import { BrowserRouter } from "react-router-dom";
 
 const colors = {
   theme: {
-    light: "#f1f1f1",
-    dark: "#f1f1f1",
+    light: "#000000",
+    dark: "#000000",
   },
 };
 
@@ -29,8 +29,8 @@ const config = {
 };
 
 const fonts = {
-  heading: `'Martian Mono', 'Martian Mono'`,
-  body: `'Roboto Mono','Roboto Mono'`,
+  heading: `'Comic Neue', 'Comic Neue'`,
+  body: `'Comic Neue','Comic Neue'`,
 };
 
 const theme = extendTheme({ colors, config, styles, fonts });
