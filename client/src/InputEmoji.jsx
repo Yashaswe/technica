@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@chakra-ui/react";
+import { FaAngleRight, FaUndo } from "react-icons/fa";
 
 import EmojiPicker, { Emoji } from "emoji-picker-react";
 
@@ -33,13 +34,13 @@ const InputEmoji = () => {
         </div>
         <Button
           onClick={clearSelectedEmoji}
-          style={{ height: 50, width: "10%" }}
+          style={{ backgroundColor: "white" }}
         >
-          Clear
+          <FaUndo size={20} />
         </Button>
 
-        <Button onClick={handleClick} style={{ height: 50, width: "10%" }}>
-          Show
+        <Button onClick={handleClick} style={{ backgroundColor: "white" }}>
+          <FaAngleRight size={20} />
         </Button>
       </div>
       <EmojiPicker
