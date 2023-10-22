@@ -73,7 +73,17 @@ Content-Type: application/json
 
 {
     "username": "linhphan",
-    "password": "12345"
+    "password": "54321"
+}
+
+
+###
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "username": "yash",
+    "password": "00001111"
 }
 
 
@@ -111,7 +121,37 @@ Content-Type: application/json
 
 {
     "username": "haphung",
-    "query": "smile happy umbrella"
+    "query": "morning cold wind soup leaf"
+}
+
+
+###
+POST http://localhost:3000/story
+Content-Type: application/json
+
+{
+    "username": "mienpham",
+    "query": "flower sky sea ladybug young-girl"
+}
+
+
+###
+POST http://localhost:3000/story
+Content-Type: application/json
+
+{
+    "username": "mienpham",
+    "query": "milk cake chef village"
+}
+
+
+###
+POST http://localhost:3000/story
+Content-Type: application/json
+
+{
+    "username": "yash",
+    "query": "heart-eyes-cat red-flower rain"
 }
 
 
@@ -121,7 +161,7 @@ Content-Type: application/json
 
 {
     "username": "linhphan",
-    "query": "orange elephant monkey"
+    "query": "happy cake tears chicken city"
 }
 
 
@@ -144,3 +184,13 @@ Content-Type: application/json
 }
 
 
+###
+GET http://localhost:3000/story/haphung
+
+
+###
+GET http://localhost:3000/story/linhphan
+
+
+###
+GET http://localhost:3000/story/mienpham

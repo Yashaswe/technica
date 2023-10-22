@@ -14,10 +14,10 @@
 
 ### STORY ROUTES
 # Create A New Story
-[ ] create a new story logged in
-[ ] create a new story without query
-[ ] create a new story logged out
-[ ] create a new story calling the Open AI API
+[x] create a new story logged in
+[x] create a new story without query
+[x] create a new story logged out
+[x] create a new story calling the Open AI API
 
 
 # Get Stories For One User

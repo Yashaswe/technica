@@ -1,0 +1,15 @@
+POST http://localhost:3000/generateVoice
+Content-Type: application/json
+
+{
+    "prompt": "flower sky sea flower house cat dog"
+}
+
+
+###
+POST http://localhost:3000/generateVoice
+Content-Type: application/json
+
+{
+    "prompt": "Once upon a time, in a small house surrounded by a beautiful garden, lived a lonely girl. She found solace in her pet bird, who would sing melodies that filled the house with joy. One sunny day, as the wind gently rustled the leaves, the girl discovered a magical flower in her garden. Its petals shimmered in vibrant colors, and its fragrance was intoxicating. Intrigued, she plucked the flower and placed it in a vase near her bird's cage. To her amazement, the bird started chirping a new tune, as if inspired by the flower's magic. The girl realized that the flower and her bird were connected, bringing happiness and harmony to her once lonely home."
+}
