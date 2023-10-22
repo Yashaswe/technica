@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
-import EmojiPicker from "emoji-picker-react";
-import "./emojiStyle.css";
+import React, { useState } from "react";
 import { Button } from "@chakra-ui/react";
+
 import EmojiPicker, { Emoji } from "emoji-picker-react";
 
 const InputEmoji = () => {
