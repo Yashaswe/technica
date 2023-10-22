@@ -1,6 +1,6 @@
-import InputEmoji from "./InputEmoji";
+import InputEmoji from "../components/InputEmoji";
 import TextPlace from "./TextPlace";
-import PlaySound from "./PlaySound";
+import PlaySound from "../components/PlaySound";
 
 const Emojify = () => {
   return (
