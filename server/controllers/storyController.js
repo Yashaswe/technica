@@ -13,7 +13,6 @@ const getUserStories = async (req, res) => {
 		const user = await User.findOne({ username })
 			.select('-password')
 			.lean()
-			.exec()
 
 		if (!user) {
 			return res.status(404).json({ error: 'User not found' })

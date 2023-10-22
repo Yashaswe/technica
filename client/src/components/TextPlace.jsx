@@ -1,4 +1,4 @@
-import { Textarea, Card, CardBody } from "@chakra-ui/react";
+import { Card, CardBody } from "@chakra-ui/react";
 
 import Typewriter from "./Typewrite";
 
@@ -9,7 +9,7 @@ const TextPlace = (props) => {
         <h1
           style={{
             fontFamily: "Comic Neue",
-            fontSize: "30px",
+            fontSize: "20px",
             padding: "15px",
           }}
         >

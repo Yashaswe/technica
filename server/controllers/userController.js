@@ -8,10 +8,7 @@ import setCookie from '../helpers/setCookie.js'
 const getUser = async (req, res) => {
 	const { username } = req.body
 	try {
-		const user = await User.findOne({ username })
-			.select('-password')
-			.lean()
-			.exec()
+		const user = await User.findOne({ username }).select('-password').lean()
 		if (!user) {
 			return res.status(404).json({ error: 'User not found' })
 		}
@@ -70,7 +67,7 @@ const loginUser = async (req, res) => {
 		const isPwdCorrect = await bcrypt.compare(password, user?.password || '')
 
 		if (!user || !isPwdCorrect) {
-			return res.status(400).json({ message: 'Invalid username or password' })
+			return res.status(400).json({ error: 'Invalid username or password' })
 		}
 
 		setCookie(user._id, res)
@@ -86,6 +83,10 @@ const loginUser = async (req, res) => {
 // @route /POST /user/logout
 // @access Public
 const logoutUser = async (req, res) => {
+	if (!req.cookies.jwt) {
+		return res.status(401).json({ error: 'User is not logged in' })
+	}
+
 	try {
 		res.cookie('jwt', '', { maxAge: 1 })
 		return res.status(200).json({ message: 'User logged out' })

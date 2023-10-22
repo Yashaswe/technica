@@ -25,6 +25,8 @@ const storySchema = mongoose.Schema(
 	}
 )
 
+storySchema.index({ postedBy: 1 })
+
 const Story = mongoose.model('Story', storySchema)
 
 export default Story

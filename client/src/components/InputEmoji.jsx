@@ -13,9 +13,7 @@ const InputEmoji = () => {
 			const emojiName = emoji.name
 			emojiUsed = emojiUsed.concat(emojiName[emojiName.length - 1])
 		})
-		console.log(emojiUsed, 'EMoji Used') //Call api
-
-		// setSelectedEmoji([]);
+		console.log(emojiUsed, 'Emoji Used') //Call api
 	}
 
 	const clearSelectedEmoji = () => {
@@ -23,8 +21,8 @@ const InputEmoji = () => {
 	}
 	return (
 		<div>
-			<div className='emojiContainer'>
-				<div className='emojiInput'>
+			<div>
+				<div>
 					{selectedEmoji.map((emoji, i) => (
 						<div key={i}>
 							{console.log(emoji)}
