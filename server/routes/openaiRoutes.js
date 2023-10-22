@@ -1,38 +1,38 @@
-const express = require('experss');
-const dotenv = require('dotenv');
+import express from 'express';
+import dotenv from 'dotenv';
+import OpenAI from 'openai';
+
 dotenv.config();
-
-const router = express.Router();
-const OpenAI = require('openai');
-
+const openaiRouter = express.Router();
 const openai = new OpenAI();
 
-router.post('/generateStory', async (req, res) => {
+openaiRouter.post('/generateStory', async (req, res) => {
     try {
-        const prompt = res.body.prompt;
-
+        const prompt = req.body.prompt;
+    
         const response = await openai.chat.completions.create({
-            messsages: [
+            messages: [
                 {
                     role: 'user',
                     content: prompt
                 },
             ],
             model: 'gpt-3.5-turbo',
-            temperatur: 0.6,
+            temperature: 0.6,
             max_tokens: 100,
             top_p: 1,
             frequency_penalty: 0,
             presence_penalty: 0
         });
-
+    
         res.status(200).send({
             bot: response.choices[0].message.content
         })
     }
-    catch {
-        res.status(500).send( {error} )
+    catch (error) {
+        console.log(error);
+        res.status(500).send( {error} );
     }
 });
 
-module.exports = router;
+export default openaiRouter;

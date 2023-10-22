@@ -1,12 +1,14 @@
-const express = require('experss');
-const router = express.Router();
-const textToSpeech = require('@google-cloud/text-to-speech');
-const fs = require('fs');
-const util = require('util');
+import express from 'express';
+import textToSpeech from '@google-cloud/text-to-speech';
+import fs from 'fs';
+import util from 'util';
+import dotenv from 'dotenv';
+dotenv.config();
 
+const speechRouter = express.Router();
 const client = new textToSpeech.TextToSpeechClient();
 
-router.post('/generateVoice', async (req, res) => {
+speechRouter.post('/', async (req, res) => {
   const text = req.body.prompt;
 
   // Construct the request
@@ -28,7 +30,6 @@ router.post('/generateVoice', async (req, res) => {
     },
   };
 
-  // Performs the text-to-speech request
   const [response] = await client.synthesizeSpeech(request);
   // Write the binary audio content to a local file
   const writeFile = util.promisify(fs.writeFile);
@@ -36,4 +37,4 @@ router.post('/generateVoice', async (req, res) => {
   console.log('Audio content written to file: output.mp3');
 });
 
-quickStart();
+export default speechRouter;
