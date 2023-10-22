@@ -26,7 +26,7 @@ app.use(cookieParser())
 
 app.use('/user', userRoutes)
 app.use('/story', storyRoutes)
-app.use('/', () => console.log('reached'))
+// app.use('/', () => console.log('reached'))
 
 app.use('/generateStory', openaiRouter)
 app.use('/generateVoice', speechRouter)

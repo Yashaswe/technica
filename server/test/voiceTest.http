@@ -1,0 +1,6 @@
+POST http://localhost:3000/generateVoice
+Content-Type: application/json
+
+{
+    "prompt": "flower sky sea flower house cat dog"
+}

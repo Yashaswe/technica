@@ -9,8 +9,9 @@ const speechRouter = express.Router();
 const client = new textToSpeech.TextToSpeechClient();
 
 speechRouter.post('/', async (req, res) => {
-  const text = req.body.prompt;
+  console.log(req.body.prompt);
 
+  const text = req.body.prompt;
   // Construct the request
   const request = {
     input: {
@@ -18,15 +19,15 @@ speechRouter.post('/', async (req, res) => {
     },
     voice: {
         languageCode: 'en-US', 
-        'name': 'en-US-Neural2-I'
+        name: 'en-US-Neural2-I'
     },
     audioConfig: {
         audioEncoding: 'LINEAR16',
         effectsProfileId: [
         'small-bluetooth-speaker-class-device'
         ],
-        'pitch': 0,
-        'speakingRate': 1
+        pitch: 0,
+        speakingRate: 1
     },
   };
 
